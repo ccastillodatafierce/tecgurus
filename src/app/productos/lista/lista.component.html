@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm" *ngFor="let prod of productos">
+      {{prod.nombre}}
+
+      <div [ngSwitch]="prod.tipo">
+        <label *ngSwitchCase="'ab'">Abarrotes</label>
+        <label *ngSwitchCase="'rf'">Refresco</label>
+        <label *ngSwitchCase="'ele'">Electronico</label>
+      </div>
+
+    </div>
+  </div>
+</div>
