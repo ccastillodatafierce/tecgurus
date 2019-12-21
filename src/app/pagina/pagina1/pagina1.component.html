@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Empresa SA de CV</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button class="btn btn-light" (click)="abrir('externo')">Modulo Externo</button>
+      </li>
+      <li class="nav-item">
+        <button class="btn btn-light" (click)="abrir('tarjeta')">Tarjeta</button>
+      </li>
+      <li class="nav-item">
+        <button class="btn btn-light" (click)="abrir('lista')">Lista</button>
+      </li>
+      <li class="nav-item">
+        <button class="btn btn-light" (click)="abrir('estilo')">Estilo</button>
+      </li>
+      <li class="nav-item">
+        <button class="btn btn-light" (click)="abrir('spinner')">Spinner</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<app-tarjeta *ngIf="id=='tarjeta'"></app-tarjeta>
+<app-usuarios *ngIf="id=='externo'"></app-usuarios>
+<app-lista *ngIf="id=='lista'"></app-lista>
+<app-estilo *ngIf="id=='estilo'"></app-estilo>
+<app-spinner *ngIf="id=='spinner'" [mostrar]="mostrar"></app-spinner>
